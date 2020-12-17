@@ -1,0 +1,1 @@
+Learning django 3.1 from the official documentation
