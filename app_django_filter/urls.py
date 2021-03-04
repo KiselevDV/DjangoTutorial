@@ -4,7 +4,7 @@ from django_filters.views import FilterView, object_filter
 from .models import Product
 from .views import product_list
 
-app_name = 'django_filter'
+app_name = 'app_django_filter'
 urlpatterns = [
     path('list_1/', product_list),
 

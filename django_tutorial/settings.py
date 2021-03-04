@@ -38,8 +38,11 @@ INSTALLED_APPS = [
 
     'polls.apps.PollsConfig',
 
-    'django_filter',  # приложение для тестирования
+    'app_django_filter',  # приложение для тестирования библиотеки
     'django_filters',  # библиотека
+
+    'app_django_tables2',  # приложение для тестирования библиотеки
+    'django_tables2',  # библиотека
 ]
 
 MIDDLEWARE = [
