@@ -35,7 +35,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',  # система сеанса
     'django.contrib.messages',  # структура обмена сообщениями
     'django.contrib.staticfiles',  # система для управления статическими файлами
+
     'polls.apps.PollsConfig',
+
+    'django_filter',  # приложение для тестирования
+    'django_filters',  # библиотека
 ]
 
 MIDDLEWARE = [
