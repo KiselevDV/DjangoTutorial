@@ -38,11 +38,14 @@ INSTALLED_APPS = [
 
     'polls.apps.PollsConfig',
 
+    # Сторонние библиотеки и приложения для их изучения
     'app_django_filter',  # приложение для тестирования библиотеки
     'django_filters',  # библиотека
 
     'app_django_tables2',  # приложение для тестирования библиотеки
     'django_tables2',  # библиотека
+
+    'django_extensions'  # библиотека
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Интернационализация и локализация
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'django_tutorial.urls'
@@ -106,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Europe/Minsk'
 
@@ -120,3 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/css/'
+
+# Настройка типа автоматически создаваемых первичных ключей
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

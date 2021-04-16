@@ -2,6 +2,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.urls import reverse
+from django.utils.translation import gettext as _, ngettext
 from django.views import generic
 
 from .models import Question, Choice
@@ -67,3 +68,27 @@ def vote(request, question_id):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
+
+
+"""
+Internationalization and localization
+"""
+
+
+# def my_view(request):
+#     output = _("Welcome to my site.")
+#     return HttpResponse(output)
+
+def my_view(request):
+    words = ['Welcome', 'to', 'my', 'site.']
+    output = _(' '.join(words))
+    return HttpResponse(output)
+
+
+def hello_world(request, count):
+    page = ngettext(
+        'there is %(count)d object',
+        'there are %(count)d objects',
+        count,
+    ) % {'count': count, }
+    return HttpResponse(page)
