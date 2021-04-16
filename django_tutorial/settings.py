@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'app_django_tables2',  # приложение для тестирования библиотеки
     'django_tables2',  # библиотека
 
+    'app_django_extensions',  # приложение для тестирования библиотеки
     'django_extensions'  # библиотека
 ]
 
