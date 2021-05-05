@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',  # система для управления статическими файлами
 
     'polls.apps.PollsConfig',
+    'blog.apps.BlogConfig',
 
     # Сторонние библиотеки и приложения для их изучения
     'app_django_filter',  # приложение для тестирования библиотеки
